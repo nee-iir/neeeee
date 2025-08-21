@@ -1,0 +1,124 @@
+/* ===== Global Styles ===== */
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #b0dfff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.menu-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.center-row {
+  position: relative;
+}
+
+/* ===== Buttons ===== */
+.menu-button {
+  padding: 30px 30px;
+  border-radius: 55px;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.menu-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Colors */
+.home {
+  background-color: #b8ecfa;
+}
+.contact {
+  background-color: #ffe686;
+}
+.profile {
+  background-color: #ff90cb;
+}
+.future {
+  background-color: #e5e6f5;
+}
+.education {
+  background-color: #ffa6a6;
+}
+
+/* ===== Bee Animation ===== */
+.bee {
+  width: 10px;
+  position: absolute;
+  top: -80px;
+  left: -90px;
+  animation: flyLoop 5s ease-in-out infinite, flapWings 0.6s ease-in-out infinite;
+  transform-origin: center;
+  z-index: 0;
+}
+
+/* Bee looping around */
+@keyframes flyLoop {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(30px, -10px) rotate(10deg);
+  }
+  50% {
+    transform: translate(60px, 0px) rotate(0deg);
+  }
+  75% {
+    transform: translate(30px, 10px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+/* Bee wing flapping */
+@keyframes flapWings {
+  0%, 100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.05;
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+a.menu-button:hover {
+  text-decoration: none;
+  color: rgb(228, 64, 220);
+}
+a.menu-button {
+  text-decoration: none; /* ✅ ลบเส้นใต้ */
+  color: black;
+  display: inline-block;
+  text-align: center;
+}

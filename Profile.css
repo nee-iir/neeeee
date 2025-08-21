@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', sans-serif;
+  background-color: #ff99cc;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  padding: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size: 100px;
+  color: white;
+  text-shadow: 2px 2px #000;
+  margin-top: 50px;
+}
+
+/* Cloud animation */
+.cloud {
+  position: absolute;
+  top: 10px;
+  width: 250px;
+  animation: floatCloud 30s linear infinite;
+}
+
+.cloud-left {
+  left: -1px;
+}
+
+.cloud-right {
+  right: -20px;
+  animation-delay: 20s;
+}
+
+@keyframes floatCloud {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(130vw); }
+}
+
+.profile-box {
+  background-color: white;
+  border-radius: 20px;
+  padding: 50px;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 10px 5px 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  width: 350px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.info {
+  text-align: left;
+  color: #ff3399;
+  font-size: 30px;
+  flex: 1;
+}
+
+.flowers {
+  position: relative;
+  margin-top: 100px;
+}
+
+.flower {
+  width: 500px;
+  position: absolute;
+  bottom: 0;
+  animation: floatFlower 3s ease-in-out infinite alternate;
+}
+
+.flower1 {
+  left: 20%;
+  animation-delay: 0s;
+}
+.flower2 {
+  left: 40%;
+  animation-delay: 1s;
+}
+.flower3 {
+  left: 60%;
+  animation-delay: 2s;
+}
+
+@keyframes floatFlower {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+.edit-btn {
+  margin-top: 40px;
+  padding: 10px 30px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: white;
+  color: #ff3399;
+}
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(to right, #ffb6e9, #cce6ff, #ffb6e9);
+  background-size: 300% 100%;
+  animation: moveSky 60s linear infinite;
+}
+
+@keyframes moveSky {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}
+.cloud {
+  position: absolute;
+  top: 10px;
+  width: 700px;
+  opacity: 0.7;
+  animation: floatCloud 60s linear infinite;
+}

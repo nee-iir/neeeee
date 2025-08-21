@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    background-color: #C3FB64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* กบ */
+  .frog {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: #6FD84B;
+    border-radius: 50%;
+  
+    transform: scale(0);
+    opacity: 0;
+  
+    /* popIn ใช้เวลา 1.2s ช้าขึ้นจากเดิม 0.6s */
+    animation: popIn 1.2s ease-out forwards, bounce 2s ease-in-out infinite;
+    animation-delay: 0s, 1.2s;
+  }
+  
+  
+  /* หู */
+  .ear {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-color: #6FD84B;
+    border-radius: 50%;
+    top: -60px;
+  }
+  
+  .ear.left {
+    left: -40px;
+  }
+  
+  .ear.right {
+    right: -40px;
+  }
+  
+  /* ตา */
+  .eye {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .eye.left {
+    left: 30px;
+  }
+  
+  .eye.right {
+    right: 30px;
+  }
+  
+  .eyeball {
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .highlight {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    top: 8px;
+    left: 8px;
+  }
+  
+  /* จมูก */
+  .nose {
+    position: absolute;
+    width: 15px;
+    height: 16px;
+    background-color: white;
+    border-radius: 60%;
+    top: 180px;
+  }
+  
+  .nose.left {
+    left: 150px;
+  }
+  
+  .nose.right {
+    right: 150px;
+  }
+  
+  /* ==== Keyframes ==== */
+  
+  /* เด้งตอนโหลด */
+  @keyframes popIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* เด้งขึ้นลงต่อเนื่อง */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
